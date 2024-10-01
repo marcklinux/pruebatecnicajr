@@ -22,9 +22,26 @@ public class App {
             System.out.println("No es capicua");
         }
     }
+
+    private void m3CounterCharacterTimes(String text){
+        int i , length , counter[] = new int[256];
+
+        length = text.length();
+        for(i = 0; i < length; i++){
+            counter[text.charAt(i)]++;
+        }
+
+        for(i = 0; i < 256; i++){
+            if(counter[i] != 0){
+                System.out.println((char)i + ": " +  counter[i]);
+            }
+
+        }
+    }
     public static void main(String[] args) {
         App app = new App();
         //app.m1InvertedString("marcos");
-        app.m2IsCapicua(525);
+        //app.m2IsCapicua(525);
+        app.m3CounterCharacterTimes("conena");
     }
 }
