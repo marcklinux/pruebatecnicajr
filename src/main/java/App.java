@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class App {
 
     private void m1InvertedString(String text){
@@ -54,11 +56,27 @@ public class App {
 
         }
     }
+
+    private void m5IsMultiploOf2(int number){
+        if(number % 2 == 0){
+            System.out.println("Es multiplo");
+        }else {
+            System.out.println("No es multiplo");
+        }
+    }
+
+    private void m6IsLeapYear(int year){
+       boolean isleapYear= LocalDate.of(year,1,1).isLeapYear();
+        System.out.println(isleapYear);
+
+    }
     public static void main(String[] args) {
         App app = new App();
         //app.m1InvertedString("marcos");
         //app.m2IsCapicua(525);
         //app.m3CounterCharacterTimes("conena");
-        app.m4RepeatCharacter("conena");
+        //app.m4RepeatCharacter("conena");
+        //app.m5IsMultiploOf2(11);
+        app.m6IsLeapYear(2024);
     }
 }
