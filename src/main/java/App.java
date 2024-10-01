@@ -93,8 +93,13 @@ public class App {
                 break;
             }
         }*/
-        boolean result = text.matches(".*[aeiou].*");
-        System.out.println(result);
+       // boolean result = text.matches(".*[aeiou].*");
+        //System.out.println(result);
+
+        boolean respuesta = Arrays.asList(text.split(""))
+                .stream().anyMatch(s-> s.equals("a")|| s.equals("e")||s.equals("i")||s.equals("o")||s.equals("u"));
+
+        System.out.println(respuesta);
 
     }
     public static void main(String[] args) {
@@ -107,6 +112,6 @@ public class App {
         //app.m6IsLeapYear(2024);
         //app.m7RandomOrderString("marcos");
         //app.m8GetOnlyNotDuplicatesList(Arrays.asList(1,2,3,4,5,5,1,2,3,7,9));
-        app.m9CheckIfVowalIsPresent("mar");
+        app.m9CheckIfVowalIsPresent("mario");
     }
 }
