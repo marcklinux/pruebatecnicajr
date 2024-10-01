@@ -38,10 +38,27 @@ public class App {
 
         }
     }
+
+    private void m4RepeatCharacter(String text){
+        int i , length , counter[] = new int[256];
+
+        length = text.length();
+        for(i = 0; i < length; i++){
+            counter[text.charAt(i)]++;
+        }
+
+        for(i = 0; i < 256; i++){
+            if(counter[i] > 1){
+                System.out.println((char)i + ": " +  counter[i]);
+            }
+
+        }
+    }
     public static void main(String[] args) {
         App app = new App();
         //app.m1InvertedString("marcos");
         //app.m2IsCapicua(525);
-        app.m3CounterCharacterTimes("conena");
+        //app.m3CounterCharacterTimes("conena");
+        app.m4RepeatCharacter("conena");
     }
 }
