@@ -1,7 +1,5 @@
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class App {
 
@@ -80,6 +78,11 @@ public class App {
         Collections.shuffle(list);
         list.forEach(System.out::println);
     }
+
+    private void m8GetOnlyNotDuplicatesList(List<Integer> list){
+        Set<Integer> set = new HashSet<>(list);
+        set.forEach(System.out::println);
+    }
     public static void main(String[] args) {
         App app = new App();
         //app.m1InvertedString("marcos");
@@ -88,6 +91,7 @@ public class App {
         //app.m4RepeatCharacter("conena");
         //app.m5IsMultiploOf2(11);
         //app.m6IsLeapYear(2024);
-        app.m7RandomOrderString("marcos");
+        //app.m7RandomOrderString("marcos");
+        app.m8GetOnlyNotDuplicatesList(Arrays.asList(1,2,3,4,5,5,1,2,3,7,9));
     }
 }
