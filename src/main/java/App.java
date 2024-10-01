@@ -83,6 +83,18 @@ public class App {
         Set<Integer> set = new HashSet<>(list);
         set.forEach(System.out::println);
     }
+
+    private void m9CheckIfVowalIsPresent(String text){
+        String[] array = text.split("");
+        boolean ispresent = false;
+        for(String s:array){
+            if(s.equals("a")|| s.equals("e")|| s.equals("i")|| s.equals("o")|| s.equals("u")){
+                ispresent = true;
+                break;
+            }
+        }
+        System.out.println(ispresent);
+    }
     public static void main(String[] args) {
         App app = new App();
         //app.m1InvertedString("marcos");
@@ -92,6 +104,7 @@ public class App {
         //app.m5IsMultiploOf2(11);
         //app.m6IsLeapYear(2024);
         //app.m7RandomOrderString("marcos");
-        app.m8GetOnlyNotDuplicatesList(Arrays.asList(1,2,3,4,5,5,1,2,3,7,9));
+        //app.m8GetOnlyNotDuplicatesList(Arrays.asList(1,2,3,4,5,5,1,2,3,7,9));
+        app.m9CheckIfVowalIsPresent("mr");
     }
 }
