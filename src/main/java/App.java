@@ -102,6 +102,19 @@ public class App {
         System.out.println(respuesta);
 
     }
+
+    private boolean m10Palindromo(String text){
+        boolean result = true;
+        int length = text.length();
+
+        for(int i = 0; i < length/2; i++ ){
+            if(text.charAt(i) != text.charAt(length-i-1)){
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
     public static void main(String[] args) {
         App app = new App();
         //app.m1InvertedString("marcos");
@@ -112,6 +125,7 @@ public class App {
         //app.m6IsLeapYear(2024);
         //app.m7RandomOrderString("marcos");
         //app.m8GetOnlyNotDuplicatesList(Arrays.asList(1,2,3,4,5,5,1,2,3,7,9));
-        app.m9CheckIfVowalIsPresent("mario");
+        //app.m9CheckIfVowalIsPresent("mario");
+        System.out.println(app.m10Palindromo("oro"));
     }
 }
