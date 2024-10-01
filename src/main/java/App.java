@@ -1,4 +1,7 @@
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class App {
 
@@ -70,6 +73,13 @@ public class App {
         System.out.println(isleapYear);
 
     }
+
+    private void m7RandomOrderString(String text){
+        String[] array = text.split("");
+        List<String> list = Arrays.asList(array);
+        Collections.shuffle(list);
+        list.forEach(System.out::println);
+    }
     public static void main(String[] args) {
         App app = new App();
         //app.m1InvertedString("marcos");
@@ -77,6 +87,7 @@ public class App {
         //app.m3CounterCharacterTimes("conena");
         //app.m4RepeatCharacter("conena");
         //app.m5IsMultiploOf2(11);
-        app.m6IsLeapYear(2024);
+        //app.m6IsLeapYear(2024);
+        app.m7RandomOrderString("marcos");
     }
 }
